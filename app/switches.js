@@ -1,14 +1,59 @@
 // 1. Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if false. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
 // Example: 
-    // input: 'Sunday', false
-    // output: 1
+// input: 'Sunday', false
+// output: 1
 //Example:
-    // input: 'Sunday', true
-    // output: 7
+// input: 'Sunday', true
+// output: 7
 
 function daysPosition(day, offset) {
-
+    case 'Sunday', true:
+    answer = 7;
+    break;
+    case 'Sunday', false:
+    answer = 1;
+    break;
+    case 'Monday', true:
+    answer = 1;
+    break;
+    case 'Monday', false:
+    answer = 2;
+    break;
+    case 'Tuesday', true:
+    answer = 2;
+    break;
+    case 'Tuesday', false:
+    answer = 3;
+    break;
+    case 'Wednesday', true:
+    answer = 3;
+    break;
+    case 'Wednesday', false:
+    answer = 4;
+    break;
+    case 'Thursday', true:
+    answer = 4;
+    break;
+    case 'Thursday', false:
+    answer = 5;
+    break;
+    case 'Friday', true:
+    answer = 5;
+    break;
+    case 'Friday', false:
+    answer = 6;
+    break;
+    case 'Saturday', true:
+    answer = 6;
+    break;
+    case 'Saturday', false:
+    answer = 7;
+    break;
+    default:
+    answer = 'That"s not a day of the week'
 }
+
+return (answer)
 
 
 // --------------------------------------------
@@ -26,10 +71,29 @@ function daysPosition(day, offset) {
  *            >= +3     |   "Ouch"
  */
 
- function golfScore(score, par) {
+function golfScore(score, par) {
+    case score == 1:
+    return ("Ace");
+    break;
+    case par - score == 2:
+    return ("Eagle");
+    break;
+    case par - score == 1:
+    return ("Birdie");
+    break;
+    case par - score == 0:
+    return ("Par");
+    break;
+    case par - score == -1:
+    return ("Bogie");
+    break;
+    case par - score == -2:
+    return ("Double Bogie")
+    break; 
+    case par - score ==  >= -3:
+    return ("Ouch");
+}
 
- }
- 
 
 // --------------------------------------------
 
@@ -45,12 +109,20 @@ function daysPosition(day, offset) {
  */
 // Write a card counting function that will receive a card. The function will increment or decrement the global count variable according to the card's value (see table above). The function will then return the current count and the string "Bet" if the count is positive, or "Hold" if the count is zero or negative.
 // Example:
-    // output: '-5 Hold'
+// output: '-5 Hold'
 // Example:
-    // output: '2 Bet'
+// output: '2 Bet'
 
 let count = 0
 
 function cardCounter(card) {
-
+case card >= '2' && card <= '6':
+    count++;
+    break;
+case card >= '10' && card <= 'A'
+    count--
+} if (count <= 0) {
+    return (${ count } 'Hold')
+} else {
+    return (${ count } 'Bet')
 }
