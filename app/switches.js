@@ -1,4 +1,4 @@
-// 1. Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if false. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
+// 1. Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if undefined. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
 // Example: 
 // input: 'Sunday', false
 // output: 1
@@ -7,59 +7,63 @@
 // output: 7
 
 function daysPosition(day, offset) {
-    case 'Sunday', true:
-    answer = 7;
-    break;
-    case 'Sunday', false:
-    answer = 1;
-    break;
-    case 'Monday', true:
-    answer = 1;
-    break;
-    case 'Monday', false:
-    answer = 2;
-    break;
-    case 'Tuesday', true:
-    answer = 2;
-    break;
-    case 'Tuesday', false:
-    answer = 3;
-    break;
-    case 'Wednesday', true:
-    answer = 3;
-    break;
-    case 'Wednesday', false:
-    answer = 4;
-    break;
-    case 'Thursday', true:
-    answer = 4;
-    break;
-    case 'Thursday', false:
-    answer = 5;
-    break;
-    case 'Friday', true:
-    answer = 5;
-    break;
-    case 'Friday', false:
-    answer = 6;
-    break;
-    case 'Saturday', true:
-    answer = 6;
-    break;
-    case 'Saturday', false:
-    answer = 7;
-    break;
-    default:
-    answer = 'That"s not a day of the week'
-}
 
-return (answer)
+    // let answer = 0
+    // switch (day, offset) {
+    //     case 'sunday' && true:
+    //         answer = 7;
+    //         break;
+    //     case 'sunday' && undefined:
+    //         answer = 1;
+    //         break;
+    //     case 'monday' && true:
+    //         answer = 1;
+    //         break;
+    //     case 'monday' && undefined:
+    //         answer = 2;
+    //         break;
+    //     case 'tuesday' && true:
+    //         answer = 2;
+    //         break;
+    //     case 'tuesday' && undefined:
+    //         answer = 3;
+    //         break;
+    //     case 'wednesday' && true:
+    //         answer = 3;
+    //         break;
+    //     case 'wednesday' && undefined:
+    //         answer = 4;
+    //         break;
+    //     case 'thursday' && true:
+    //         answer = 4;
+    //         break;
+    //     case 'thursday' && undefined:
+    //         answer = 5;
+    //         break;
+    //     case 'friday' && true:
+    //         answer = 5;
+    //         break;
+    //     case 'friday' && undefined:
+    //         answer = 6;
+    //         break;
+    //     case 'saturday' && true:
+    //         answer = 6;
+    //         break;
+    //     case 'saturday' && undefined:
+    //         answer = 7;
+    //         break;
+    //     default:
+    //         answer = 'That"s not a day of the week'
+    // }
+
+    // return answer
+}
 
 
 // --------------------------------------------
 
 
-/** 2. Given a both a score and a score for par, return the corresponding term:
+/** 2. Given a both a score and a score for par && return the corresponding term:
  *           difference |   term
  *    -----------------------------------
  *  (score == 1) || -3  |   "Ace"
@@ -72,26 +76,27 @@ return (answer)
  */
 
 function golfScore(score, par) {
-    case score == 1:
-    return ("Ace");
-    break;
-    case par - score == 2:
-    return ("Eagle");
-    break;
-    case par - score == 1:
-    return ("Birdie");
-    break;
-    case par - score == 0:
-    return ("Par");
-    break;
-    case par - score == -1:
-    return ("Bogie");
-    break;
-    case par - score == -2:
-    return ("Double Bogie")
-    break; 
-    case par - score ==  >= -3:
-    return ("Ouch");
+    //     switch (score, par)
+    //     case score == 1:
+    //         return ("Ace");
+    //         break;
+    //         case par - score == 2:
+    //             return "Eagle";
+    //             break;
+    //         case par - score == 1:
+    //             return "Birdie";
+    //             break;
+    //         case par - score == 0:
+    //             return ("Par");
+    //             break;
+    //         case par - score == -1:
+    //             return ("Bogie");
+    //             break;
+    //         case par - score == -2:
+    //             return ("Double Bogie")
+    //             break;
+    //         case par - score ==  >= -3:
+    //             return ("Ouch");
 }
 
 
@@ -116,13 +121,14 @@ function golfScore(score, par) {
 let count = 0
 
 function cardCounter(card) {
-case card >= '2' && card <= '6':
-    count++;
-    break;
-case card >= '10' && card <= 'A'
-    count--
-} if (count <= 0) {
-    return (${ count } 'Hold')
-} else {
-    return (${ count } 'Bet')
+    //         switch (card)
+    // case card >= '2' && card <= '6':
+    //             count++;
+    //             break;
+    //             case card >= '10' && card <= 'A'
+    //     count--
+    //         } if (count <= 0) {
+    //             return (${ count } 'Hold')
+    //         } else {
+    //             return (${ count } 'Bet')
 }
